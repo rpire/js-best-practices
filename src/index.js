@@ -39,15 +39,17 @@ window.onload = reload();
 
 const task = document.getElementById('add-item');
 const addNewBtn = document.getElementById('add-new-btn');
+const alert = document.getElementById('alert');
 addNewBtn.addEventListener('click', () => {
   if (task.value.length > 0) {
     listArr.push(addNew(task.value, listArr.length + 1));
     const newStorage = JSON.stringify(listArr);
     localStorage.setItem('toDoList', newStorage);
     task.value = '';
+    alert.classList.add('invisible');
     reload();
   } else {
-    alert('Tasks must contain text.\nTry typing something into the "Add to your list..." input.');
+    alert.classList.remove('invisible');
   }
 });
 

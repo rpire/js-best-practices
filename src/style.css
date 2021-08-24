@@ -8,6 +8,18 @@ body {
   margin: 0;
 }
 
+.alert {
+  position: fixed;
+  top: 50px;
+  left: 30%;
+  background-color: #fff;
+  border: 2px solid red;
+  box-shadow: 0 0 10px black;
+  color: red;
+  text-align: center;
+  width: 40%;
+}
+
 main {
   background-color: #fff;
   box-shadow: 0 0 10px black;
@@ -47,6 +59,10 @@ i {
 .heading i:hover,
 .add-container i:hover {
   color: black;
+}
+
+.invisible {
+  display: none !important;
 }
 
 .done {
